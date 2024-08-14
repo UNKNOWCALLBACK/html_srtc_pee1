@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0">
+    <title>WELCOME TO CHOMPHON WEBSITE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="logo.ico">
+    <link rel="shortcut icon" type="image/png" href="logo.ico">
+    <style>
+        body {
+            font-family: "IBM Plex Sans Thai Looped", sans-serif;
+            font-weight: 700;
+        }
+        @keyframes moveLogo {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+    25%, 75% {
+        transform: translateX(-20px);
+    }
+}
+
+        .moving-logo {
+            animation: moveLogo 1s infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900">   
+    <header class="fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+        <div class="container mx-auto py-4 text-center">
+            <h1 class="text-2xl font-bold text-gray-800 dark:text-gray-200">ยินดีต้อนรับสู่เว็บไซค์แหล่งท่องเที่ยวในจังหวัดชุมพร</h1>
+        </div>
+    </header>
+    <main class="flex items-center justify-center h-screen">
+        <div class="text-center">
+            <img id="logo" src="logo.png" alt="logo chomphon" class="mx-auto mb-8">
+            <button id="loginButton" class="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                LOGIN TO WEBSITE
+            </button>
+            <p id="loadingMessage" class="mt-4 text-lg font-medium text-gray-800 dark:text-gray-200" style="display: none;">กำลังโหลด....</p>
+            <audio id="audio" src="/music/mask.mp3"></audio>
+        </div>
+    </main>
+    <script>
+        document.getElementById('loginButton').addEventListener('click', function() {
+            var logo = document.getElementById('logo');
+            var loadingMessage = document.getElementById('loadingMessage');
+            var audio = document.getElementById('audio');
+            logo.classList.add('moving-logo');
+            loginButton.style.display = 'none';
+            loadingMessage.style.display = 'block';
+            audio.play();
+            setTimeout(function() {
+                window.location.href = '/core/home.html';
+            }, 25000);
+        });
+    </script>
+</body>
+</html>

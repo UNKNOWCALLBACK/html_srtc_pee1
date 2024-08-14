@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+}
+
+:root {
+    --red : red;
+    --bule : #0099ff;
+}
+body{
+    background-color: var(--bule);
+    font-family: "IBM Plex Sans Thai", sans-serif;
+    font-weight: 700;
+}
+.main{
+    background-color: bisque;
+    width: 450px;
+    padding: 15px;
+    margin-top: 150px;
+    box-shadow: 2px 2px 10px 2px #000;
+    border-radius: 15px;
+}
+
+.img-page{
+    border-radius: 100px;
+}
+.btn-welcome{
+    background-color: blueviolet;
+    color: beige;
+    padding: 14px;
+    font-weight: 800;
+    font-size: 14px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px 2px #000;
+    width: 150px;
+}
+.btn-welcome:hover{
+    background-color: rgb(0, 0, 0);
+    transform: translate(10px);
+}
+.footer-class {
+ color: #fff;
+ margin-top: 190px;
+}

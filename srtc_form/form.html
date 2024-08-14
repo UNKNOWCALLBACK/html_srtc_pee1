@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM HTML</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet">
+</head>
+<body style="background-color: aquamarine; justify-items: center;   font-family: 'Roboto Condensed', sans-serif;">
+<center>
+    
+    <div style="background-color: aliceblue; width: 25%; border-radius: 15px; padding: 14px; box-shadow: 0 0 10px  rgb(0, 0, 0); ">
+        <h1 style="text-shadow: 2px 2px yellow; font-size: 30px;">แบบฟอร์มการสมัครสมาชิกในรายวิชาการพัฒนาเว็บด้วยภาษา HTML</h1>
+        <form action="data.php" method="post">
+        <label for="html">ชื่อจริง-นามสกล :</label> &nbsp;<input name="name" type="text" id="username" placeholder="ตัวอย่าง : นายใจดี จังเลย" style="border-radius: 15px; border: 2px solid #c5b9b9; width: 45%; text-align: center; padding: 10px;"><br><br>
+        <label for="html">ชื่อเล่น :</label> <input name="nickname" type="text" id="id" placeholder="ตัวอย่าง : ใจดี" style="border-radius: 15px; border: 2px solid #c5b9b9; width: 45%; text-align: center; margin-left: 63px; padding: 10px; "><br><br>
+        <label for="html">รหัสประจำตัว :</label> <input name="numberof" type="number" placeholder="ตัวอย่าง : 6721901xxx" style="border-radius: 15px; border: 2px solid #c5b9b9; width: 45%; text-align: center; margin-left: 25px; padding: 10px; "><br><br>        
+        <label for="html">แผนก :</label> 
+        <select id="orther" style="border-radius: 15px; border: 2px solid #c5b9b9; width: 50%; text-align: center; margin-left: 70px; padding: 10px;"> 
+            <option value="1">แผนกเทคโนโลยีสารสนเทศ</option>
+            <option value="2">แผนกช่างยนต์</option>
+            <option value="3">แผนกช่างเชื่อมโลหะ</option>
+            <option value="4">แผนกช่างกล</option>
+            <option value="5">แผนกอิเล็กทรอนิกส์</option>
+            <option value="6">แผนกการยาง</option>
+            <option value="7">แผนกก่อสร้าง</option>
+            <option value="8">แผนกช่างไฟฟ้า</option>
+            <option value="9">แผนกสถาปัตย์</option>
+            <option value="10">แผนกยานยนต์ไฟฟ้า</option>
+        </select><br><br>
+       <div style="background-color: antiquewhite; padding: 14px; border-radius: 15px;"> <label id="divsd">ชั่นปี :</label><input type="radio" id="co1" ><label for="co1">ปวช.1</label><input type="radio" id="co2" ><label for="co2">ปวช.2</label><input type="radio" id="co3" ><label for="co3">ปวช.3</label></div>
+   <br><div>กรอกเมื่อวันที่ : <input type="date" style="padding: 14px; border-radius: 15px;"></div>
+       <!-- <label></label> -->
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+       <input type="submit" style="margin-left: -150px; border-radius: 15px; background-color: #fff; padding: 10px; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="reset" style="margin-right: -50px; border-radius: 15px; background-color: #fff; padding: 10px; ">
+    </form>
+    </div>
+    </center>
+</body>
+</html>

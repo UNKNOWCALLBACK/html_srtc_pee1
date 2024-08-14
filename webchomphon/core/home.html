@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0">
+    <title>แหล่งท่องเที่ยวจังหวัดชุมพร</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="/logo.ico">
+<link rel="shortcut icon" type="image/png" href="/logo.ico">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/488c064d5d.js" crossorigin="anonymous"></script>
+<!-- <script src="https://cdn.tailwindcss.com"></script> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body class="bg-white dark:bg-gray-700">
+    <style>
+         body {
+    font-family: "IBM Plex Sans Thai", sans-serif;
+    font-weight: 600;
+    height: 100%;
+    overflow: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.btn-information{
+  background-color: #888;
+  width: 40%;
+  border-radius: 30px;
+  box-shadow: #0cbae1 3px 3px;
+}
+        .btn-main {
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.7); 
+    width: 55%;
+    border: 2px solid #ffffff;
+    height: 150px;
+    /*text-shadow: red 2px 2px;*/
+}
+
+
+body::-webkit-scrollbar {
+    width: 0; 
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+
+body::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+
+#myButton {
+    pointer-events: none;
+}
+
+span {
+    font-size: 40px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    span {
+        font-size: 30px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    span {
+        font-size: 20px;
+    }
+}
+
+
+@media screen and (min-width: 481px) and (max-width: 772px) {
+    span {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 773px) and (max-width: 790px) {
+    span {
+        font-size: 30px;
+    }
+}
+
+@media screen and (min-width: 791px) and (max-width: 1600px) {
+    span {
+        font-size: 35px;
+    }
+}
+
+@media screen and (min-width: 1256px) {
+    span {
+        font-size: 30px;
+    }
+}
+.footer1 {
+  background-color: aquamarine;
+}
+
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  border-radius: 15px;
+  margin: 0;
+}
+
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #51dbd6;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  box-shadow: #ffffff 2px 2px;
+  border-radius: 15px;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border-radius: 15px;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: color;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  margin-right: 20px; /* ระยะห่างระหว่างการ์ด */
+}
+
+    </style>
+
+
+
+<nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="/logo.png" class="h-8" alt="chomphon Logo">
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">แหล่งท่องเที่ยวจังหวัดชุมพร</span>
+    </a>
+    <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+       <a href="/core/login.html"> <button type="button" class="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">LOGIN</button></a>
+        <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="true">
+          <!-- <span class="sr-only">Open main menu</span> -->
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+    </div>
+    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+      <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+        <li>
+          <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" style="color: blue;">หน้าหลัก</a>
+        </li>
+        <li>
+            <div class="dropdown">
+                <button class="dropbtn">อำเภอต่างๆในจังหวัด 
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" >
+                  <a href="/amphom/chomphon.html">[อำเภอ] เมืองชุมพร</a>
+                  <a href="/amphom/patoi.html">[อำเภอ] ปะทิว</a>
+                  <a href="/amphom/tazak.html">[อำเภอ] ท่าแซะ</a>
+                  <a href="/amphom/sawi.html">[อำเภอ] สวี</a>
+                  <a href="/amphom/langsuan.html">[อำเภอ] หลังสวน</a>
+                  <a href="/amphom/lamae.html">[อำเภอ] ละแม</a>
+                  <a href="/amphom/patao.html">[อำเภอ] พะโต๊ะ</a>
+                  <a href="/amphom/toitakoi.html">[อำเภอ] ทุ่งตะโก</a>
+                </div>
+              </div> 
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+        </li>
+        <li>
+          <a href="/Contact/index.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">ทีมพัฒนา</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+  <br><br>
+  
+
+
+  <br><br><br><br><br><br>
+  <center><button class="btn-main">
+    <span style="color: #ffffff;">ยินดีต้อนรับสู่เว็บไซค์</span>
+    <span style="color: #0cbae1;">แหล่งท่องเที่ยวในจังหวัดชุมพร</span>
+    <!-- <br>
+    <span style="color: chocolate;">พัฒนาโดย </span>
+    <span style="color: purple;">แผนกเทคโนโลยีสารสนเทศ</span>
+    <span style="color: chocolate;"> ปวช.1ทส.1</span> -->
+  </button>
+<br><br><br>
+<marquee><span style="color: #ffffff;" >ระบบแนะนำที่ท่องเที่ยวภายในจังหวัดชุมพร จัดทำระบบโดย ปวช.1 ทส.1 </span><span style="color: violet;">แผนกเทคโนโลยีสารสนเทศ </span><span style="color: #ffffff;">วิทยาลัยเทคนืคสุราษฏร์ธานี</span></marquee>
+<br><br><br>
+<button style="color: #ffffff; border-radius: 15px; box-shadow: #51dbd6 2px 2px; text-align: center; background-color: #888; width: 15%; height: 50px;">ผู้บริหารราชการจังหวัดชุมพร</button>
+<br><br><br><br>
+
+<div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  <div class="flex justify-end px-4 pt-4">
+      <button id="dropdownButton" data-dropdown-toggle="dropdown" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5" type="button">
+          <span class="sr-only">Open dropdown</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
+              <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
+          </svg>
+      </button>
+      <!-- Dropdown menu -->
+      <div id="dropdown" class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+          <ul class="py-2" aria-labelledby="dropdownButton">
+          <li>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Edit</a>
+          </li>
+          <li>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Export Data</a>
+          </li>
+          <li>
+              <a href="#" class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
+          </li>
+          </ul>
+      </div>
+  </div>
+  <div class="flex flex-col items-center pb-10">
+      <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="/amphom/img/poova.jpg" alt="Bonnie image"/>
+      <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white"> นายวิสาห์ พูลศิริรัตน์</h5>
+      <span class="text-sm text-gray-500 dark:text-gray-400">ผู้ว่าราชการจังหวัดชุมพร</span>
+  </div>
+</div>
+  </div><br>
+<span style="color: #ffffff;">คำขวัญประจำจังหวัดชุมพร<br>ประตูสู่ภาคใต้ ไหว้เสด็จในกรม ชมไร่กาแฟ แลหาดทรายรี ดีกล้วยเล็บมือ ขึ้นชื่อรังนก</span>
+<br><br><br><br><br><br><br><br><br>
+<button class="btn-information"><span style="color: rgb(236, 45, 20); text-shadow: blue 3px 3px;">ตัวอย่างอำเภอปะทิว</span></button>
+  <main class="py-6 px-4 sm:p-6 md:py-10 md:px-8">
+    <div class="max-w-4xl mx-auto grid grid-cols-1 lg:max-w-5xl lg:gap-x-20 lg:grid-cols-2">
+      <div class="relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1">
+        <h1 class="mt-1 text-lg font-semibold text-white sm:text-slate-900 md:text-2xl dark:sm:text-white">หาดทุ่งวัวแล่น ตำบลสะพลี อำเภอปะทิว จังหวัดชุมพร</h1>
+        <p class="text-sm leading-4 font-medium text-white sm:text-slate-500 dark:sm:text-slate-400">หาดทุ่งวัวแล่น ตำบลสะพลี</p>
+      </div>
+      <div class="grid gap-4 col-start-1 col-end-3 row-start-1 sm:mb-6 sm:grid-cols-4 lg:gap-6 lg:col-start-2 lg:row-end-6 lg:row-span-6 lg:mb-0">
+        <img src="/amphom/img/patoi/หาดทุ่งวัวแลน-main.webp" alt="" class="w-full h-60 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full" loading="lazy">
+        <img src="/amphom/img/patoi/หาดทุ่งวัวแล่น2.webp" alt="" class="hidden w-full h-52 object-cover rounded-lg sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy">
+        <img src="/amphom/img/patoi/หาดทุ่งวัวแล่น3.webp" alt="" class="hidden w-full h-52 object-cover rounded-lg md:block lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy">
+      </div>
+      <dl class="mt-4 text-xs font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2">
+        <dt class="sr-only">Reviews</dt>
+        <dd class="text-indigo-600 flex items-center dark:text-indigo-400">
+          <svg width="24" height="24" fill="none" aria-hidden="true" class="mr-1 stroke-current dark:stroke-indigo-500">
+            <path d="m12 5 2 5h5l-4 4 2.103 5L12 16l-5.103 3L9 14l-4-4h5l2-5Z"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span>4.7/5 <span class="text-slate-400 font-normal">(39)</span></span>
+        </dd>
+        <dt class="sr-only">Location</dt>
+        <dd class="flex items-center">
+          <svg width="2" height="2" aria-hidden="true" fill="currentColor" class="mx-3 text-slate-300">
+            <circle cx="1" cy="1" r="1" />
+          </svg>
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1 text-slate-400 dark:text-slate-500" aria-hidden="true">
+            <path d="M18 11.034C18 14.897 12 19 12 19s-6-4.103-6-7.966C6 7.655 8.819 5 12 5s6 2.655 6 6.034Z" />
+            <path d="M14 11a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
+          </svg>
+          อำเภอปะทิว, จังหวัดชุมพร
+        </dd>
+      </dl>
+      <div class="mt-4 col-start-1 row-start-3 self-center sm:mt-0 sm:col-start-2 sm:row-start-2 sm:row-span-2 lg:mt-6 lg:col-start-1 lg:row-start-3 lg:row-end-4">
+        <span style="font-size: smaller; color: #ffffff;">อ้างอิงคะแนนรีวิวจาก trip.com</span><br>
+        <button type="button" class="bg-indigo-600 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg"><a href="https://www.google.com/maps/place/%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B8%97%E0%B8%B8%E0%B9%88%E0%B8%87%E0%B8%A7%E0%B8%B1%E0%B8%A7%E0%B9%81%E0%B8%A5%E0%B9%88%E0%B8%99/@10.5590547,99.2297484,13z/data=!4m6!3m5!1s0x30ff540345b6937f:0x7d0643d0d6e4c6c5!8m2!3d10.5626858!4d99.2739526!16s%2Fg%2F11bx84cc2l?entry=ttu" target="_blank">กดที่นี่เพื่อไปตามGOOGLE MAP</a></button>
+      </div>
+      <p class="mt-4 text-sm leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 dark:text-slate-400">
+    
+        หาดทุ่งวัวแล่น บรรยากาศดีมาก คนไม่เยอะ ร้านอาหาร คาเฟ่ ริมหาดคือดีมาก อร่อยยย ชอบถนนเรียบหาดมาก มีที่จอดรถให้ มีเต้นท์ให้บนหาด เวลาแดดร้อน เดินลงทะเลคือไม่ร้อนเลย น้ำทะเลสีฟ้าสวยมาก แนะนำเลยค่ะ ประทับใจมาก
+      </p>
+    </div>
+  </main>
+  <button class="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><a href="/amphom/patoi.html" target="_blank">ติดตามอำเภอปะทิวต่อคลิ๊กเล๊ยยยย</a></button><br><br><br>
+  <hr class="border-double border-4 border-sky-500">
+  
+  <!-- template at here-->
+
+  <bR>
+    <button class="btn-information"><span style="color: rgb(236, 45, 20); text-shadow: blue 3px 3px;">ตัวอย่างอำเภอท่าแซะ</span></button>
+  <main class="py-6 px-4 sm:p-6 md:py-10 md:px-8">
+    <div class="max-w-4xl mx-auto grid grid-cols-1 lg:max-w-5xl lg:gap-x-20 lg:grid-cols-2">
+      <div class="relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1">
+        <h1 class="mt-1 text-lg font-semibold text-white sm:text-slate-900 md:text-2xl dark:sm:text-white">น้ำตกกะเปาะ ตำบลหงษ์เจริญ อำเภอท่าแซะ จังหวัดชุมพร</h1>
+        <p class="text-sm leading-4 font-medium text-white sm:text-slate-500 dark:sm:text-slate-400">น้ำตกกะเปาะ ตำบลหงษ์เจริญ</p>
+      </div>
+      <div class="grid gap-4 col-start-1 col-end-3 row-start-1 sm:mb-6 sm:grid-cols-4 lg:gap-6 lg:col-start-2 lg:row-end-6 lg:row-span-6 lg:mb-0">
+        <img src="/amphom/img/tazak/kapo_waterfall-main.webp" alt="" class="w-full h-60 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full" loading="lazy">
+        <img src="/amphom/img/tazak/kapo_waterfall2.webp" alt="" class="hidden w-full h-52 object-cover rounded-lg sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy">
+        <img src="/amphom/img/tazak/kapo_waterfall3.webp" alt="" class="hidden w-full h-52 object-cover rounded-lg md:block lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy">
+      </div>
+      <dl class="mt-4 text-xs font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2">
+        <dt class="sr-only">Reviews</dt>
+        <dd class="text-indigo-600 flex items-center dark:text-indigo-400">
+          <svg width="24" height="24" fill="none" aria-hidden="true" class="mr-1 stroke-current dark:stroke-indigo-500">
+            <path d="m12 5 2 5h5l-4 4 2.103 5L12 16l-5.103 3L9 14l-4-4h5l2-5Z"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span> 5/5<span class="text-slate-400 font-normal">(3)</span></span>
+        </dd>
+        <dt class="sr-only">Location</dt>
+        <dd class="flex items-center">
+          <svg width="2" height="2" aria-hidden="true" fill="currentColor" class="mx-3 text-slate-300">
+            <circle cx="1" cy="1" r="1" />
+          </svg>
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1 text-slate-400 dark:text-slate-500" aria-hidden="true">
+            <path d="M18 11.034C18 14.897 12 19 12 19s-6-4.103-6-7.966C6 7.655 8.819 5 12 5s6 2.655 6 6.034Z" />
+            <path d="M14 11a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
+          </svg>
+          อำเภอท่าแซะ, จังหวัดชุมพร
+        </dd>
+      </dl>
+      <div class="mt-4 col-start-1 row-start-3 self-center sm:mt-0 sm:col-start-2 sm:row-start-2 sm:row-span-2 lg:mt-6 lg:col-start-1 lg:row-start-3 lg:row-end-4">
+        <span style="font-size: smaller; color: #ffffff;">อ้างอิงคะแนนรีวิวจาก trip</span><br>
+        <button type="button" class="bg-indigo-600 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg"><a href="https://www.google.com/maps/place/%E0%B8%A7%E0%B8%99%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%95%E0%B8%81%E0%B8%81%E0%B8%B0%E0%B9%80%E0%B8%9B%E0%B8%B2%E0%B8%B0/@10.7441128,99.2091605,17z/data=!3m1!4b1!4m6!3m5!1s0x30ff4ca2898075e1:0x9036cba0d32965af!8m2!3d10.7441075!4d99.2117354!16s%2Fg%2F11h13258y?entry=ttu" target="_blank">กดที่นี่เพื่อไปตามGOOGLE MAP</a></button>
+      </div>
+      <p class="mt-4 text-sm leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 dark:text-slate-400">
+        จุดเช็คอินแห่งใหม่ของชุมพรคือสะพานไม้ไผ่ เกิดจากความร่วมมือของชาวบ้านกับผู้นำท้องที่ท้องถิ่น เป็นจุดเริ่มต้นของการพัฒนาแหล่งท่องเที่ยวอำเภอท่าแซะ ผมมีความเชื่อว่าสถานที่แห่งนี้มีแรงดึงดูดให้เราอยากจะมาหยุด เพื่อที่จะเช็คอินกับน้ำตกกะเปาะ ที่สวยงามที่สุด ซึ่งติดกับถนนเพชรเกษม ต่อไปใครๆก็ต้องแวะไปถ่ายรูปกันที่นี่น้ำตกกะเปาะ เป็นน้ำตกที่สวยงาม อยู่ในความดูแลของวนอุทยานน้ำตกกะเปาะ
+      </p>
+    </div>
+  </main>
+  <button class="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><a href="/amphom/tazak.html" target="_blank">ติดตามอำเภอท่าแซะต่อคลิ๊กเลยย</a></button><br>
+  <br><hr class="border-double border-4 border-sky-500">
+  
+
+
+
+
+  <bR>
+    <button class="btn-information"><span style="color: rgb(236, 45, 20); text-shadow: blue 3px 3px;">ตัวอย่างอำเภอเมืองชุมพร</span></button>
+  <main class="py-6 px-4 sm:p-6 md:py-10 md:px-8">
+    <div class="max-w-4xl mx-auto grid grid-cols-1 lg:max-w-5xl lg:gap-x-20 lg:grid-cols-2">
+      <div class="relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1">
+        <h1 class="mt-1 text-lg font-semibold text-white sm:text-slate-900 md:text-2xl dark:sm:text-white">ศาลกรมหลวงชุมพร ตำบลหาดทรายรี อำเภอเมืองชุมพร  จังหวัดชุมพร</h1>
+        <p class="text-sm leading-4 font-medium text-white sm:text-slate-500 dark:sm:text-slate-400">ศาลกรมหลวงชุมพร ตำบลหาดทรายรี</p>
+      </div>
+      <div class="grid gap-4 col-start-1 col-end-3 row-start-1 sm:mb-6 sm:grid-cols-4 lg:gap-6 lg:col-start-2 lg:row-end-6 lg:row-span-6 lg:mb-0">
+        <img src="/amphom/img/chomphon/gmomalaong.webp" alt="" class="w-full h-60 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full" loading="lazy">
+        <img src="/amphom/img/chomphon/กรมหลวง-main.webp" alt="" class="hidden w-full h-52 object-cover rounded-lg sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy">
+        <img src="/amphom/img/chomphon/กรมหลวง.webp" alt="" class="hidden w-full h-52 object-cover rounded-lg md:block lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy">
+      </div>
+      <dl class="mt-4 text-xs font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2">
+        <dt class="sr-only">Reviews</dt>
+        <dd class="text-indigo-600 flex items-center dark:text-indigo-400">
+          <svg width="24" height="24" fill="none" aria-hidden="true" class="mr-1 stroke-current dark:stroke-indigo-500">
+            <path d="m12 5 2 5h5l-4 4 2.103 5L12 16l-5.103 3L9 14l-4-4h5l2-5Z"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span> 4.9/5<span class="text-slate-400 font-normal">(10)</span></span>
+        </dd>
+        <dt class="sr-only">Location</dt>
+        <dd class="flex items-center">
+          <svg width="2" height="2" aria-hidden="true" fill="currentColor" class="mx-3 text-slate-300">
+            <circle cx="1" cy="1" r="1" />
+          </svg>
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1 text-slate-400 dark:text-slate-500" aria-hidden="true">
+            <path d="M18 11.034C18 14.897 12 19 12 19s-6-4.103-6-7.966C6 7.655 8.819 5 12 5s6 2.655 6 6.034Z" />
+            <path d="M14 11a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
+          </svg>
+          อำเภอเมืองชุมพร, จังหวัดชุมพร
+        </dd>
+      </dl>
+      <div class="mt-4 col-start-1 row-start-3 self-center sm:mt-0 sm:col-start-2 sm:row-start-2 sm:row-span-2 lg:mt-6 lg:col-start-1 lg:row-start-3 lg:row-end-4">
+        <span style="font-size: smaller; color: #ffffff;">อ้างอิงคะแนนรีวิวจาก trip</span><br>
+        <button type="button" class="bg-indigo-600 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg"><a href="https://maps.app.goo.gl/SBKpgCmY3LChCaaT8" target="_blank">กดที่นี่เพื่อไปตามGOOGLE MAP</a></button>
+      </div>
+      <p class="mt-4 text-sm leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 dark:text-slate-400">
+        ตั้งอยู่บริเวณหาดทรายรี สร้างขึ้นเพื่อเป็นอนุสรณ์สถานของพลเรือเอก พระเจ้าบรมวงศ์เธอ กรมหลวงชุมพรเขตอุดมศักดิ์ องค์บิดาของทหารเรือไทย หรือที่ผู้คนเรียกกันว่า “เสด็จเตี่ย” อนุสรณ์สถานประกอบด้วยศาลหลังเก่าอยู่ทางด้านล่าง ใกล้กับเรือรบหลวงชุมพร ซึ่งเป็นที่ตั้งของพระตำหนักที่พระองค์สิ้นพระชนม์ และศาลหลังใหม่ที่สร้างขึ้นบนเนินเขา โดยจำลองให้เป็นเรือรบหลวงพระร่วงและมีศาลตั้งอยู่บนเรือ บริเวณนี้เป็นจุดชมวิวที่สามารถมองเห็นทิวทัศน์ของหาดทรายรีที่เป็นเวิ้งสวยงาม
+      </p>
+    </div>
+  </main>
+  <button class="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><a href="/amphom/chomphon.html" target="_blank">ติดตามอำเภอเมืองชุมพรต่อคลิ๊กเลยย</a></button><br>
+  <br><hr class="border-double border-4 border-sky-500">
+  
+
+<!-- template at here-->
+
+
+<bR>
+  <button class="btn-information"><span style="color: rgb(236, 45, 20); text-shadow: blue 3px 3px;">ตัวอย่างอำเภอสวี</span></button>
+<main class="py-6 px-4 sm:p-6 md:py-10 md:px-8">
+  <div class="max-w-4xl mx-auto grid grid-cols-1 lg:max-w-5xl lg:gap-x-20 lg:grid-cols-2">
+    <div class="relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1">
+      <h1 class="mt-1 text-lg font-semibold text-white sm:text-slate-900 md:text-2xl dark:sm:text-white">ดอยตาปัง ตำบลเขาทะลุ อำเภอสวี จังหวัดชุมพร</h1>
+      <p class="text-sm leading-4 font-medium text-white sm:text-slate-500 dark:sm:text-slate-400">ดอยตาปัง ตำบลเขาทะลุ</p>
+    </div>
+    <div class="grid gap-4 col-start-1 col-end-3 row-start-1 sm:mb-6 sm:grid-cols-4 lg:gap-6 lg:col-start-2 lg:row-end-6 lg:row-span-6 lg:mb-0">
+      <img src="/amphom/img/sawi/doitapah-main.jpg" alt="" class="w-full h-60 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full" loading="lazy">
+      <img src="/amphom/img/sawi/doitapah2.jpg" alt="" class="hidden w-full h-52 object-cover rounded-lg sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy">
+      <img src="/amphom/img/sawi/doitapah3.jpg" alt="" class="hidden w-full h-52 object-cover rounded-lg md:block lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy">
+    </div>
+    <dl class="mt-4 text-xs font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2">
+      <dt class="sr-only">Reviews</dt>
+      <dd class="text-indigo-600 flex items-center dark:text-indigo-400">
+        <svg width="24" height="24" fill="none" aria-hidden="true" class="mr-1 stroke-current dark:stroke-indigo-500">
+          <path d="m12 5 2 5h5l-4 4 2.103 5L12 16l-5.103 3L9 14l-4-4h5l2-5Z"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <span> <span class="text-slate-400 font-normal">(cannot found)</span></span>
+      </dd>
+      <dt class="sr-only">Location</dt>
+      <dd class="flex items-center">
+        <svg width="2" height="2" aria-hidden="true" fill="currentColor" class="mx-3 text-slate-300">
+          <circle cx="1" cy="1" r="1" />
+        </svg>
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1 text-slate-400 dark:text-slate-500" aria-hidden="true">
+          <path d="M18 11.034C18 14.897 12 19 12 19s-6-4.103-6-7.966C6 7.655 8.819 5 12 5s6 2.655 6 6.034Z" />
+          <path d="M14 11a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
+        </svg>
+        อำเภอสวี, จังหวัดชุมพร
+      </dd>
+    </dl>
+    <div class="mt-4 col-start-1 row-start-3 self-center sm:mt-0 sm:col-start-2 sm:row-start-2 sm:row-span-2 lg:mt-6 lg:col-start-1 lg:row-start-3 lg:row-end-4">
+      <span style="font-size: smaller; color: #ffffff;">อ้างอิงคะแนนรีวิวจาก unknow Location</span><br>
+      <button type="button" class="bg-indigo-600 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg"><a href="https://goo.gl/maps/3F47jC2VDCjSfmCz5  " target="_blank">กดที่นี่เพื่อไปตามGOOGLE MAP</a></button>
+    </div>
+    <p class="mt-4 text-sm leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 dark:text-slate-400">
+     <b>การเดินทาง ไปยัง ดอยตาปัง</b> <br>
+   ส่วนการเดินทางมายัง ดอยตาปัง นั้น ใครที่ไม่อยากขับรถมาเอง แนะนำให้มารถไฟเลยค่ะ สามารถเลือกเป็นรถไฟนอนได้เลยค่ะ ได้บรรยากาศของการมาเที่ยวสุดๆ และสนุกมากๆ ค่ะ ใช้เวลาหลายชั่วโมงอยู่เหมือนกัน นอนไปยาวๆ แล้วก็ตื่นมาลงที่ สถานีสวี ค่ะ จากนั้นเช่ารถของชาวบ้านต่อไปยังดอย ก็เป็นการถึงที่หมายเรียบร้อยแล้วค่ะ นับว่าเป็นอีกบรรยากาศ ของ จังหวัดชุมพร ที่ไม่เคยได้สัมผัสเหมือนกันค่ะ ปกติเราจะนึกถึงแค่ทะเลตลอด แต่ไม่รู้เลยว่ามี ดอยตาปัง ที่สวยแบบนี้อยู่ด้วย มาครั้งเดียวก็หลงรักแล้วค่ะ และจะต้องมีครั้งที่สองและสามตามมาอย่างแน่นอนค่ะ
+    </p>
+  </div>
+</main>
+<button class="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><a href="/amphom/sawi.html" target="_blank">ติดตามอำเภอสวีต่อคลิ๊กเลยย</a></button><br>
+<br><hr class="border-double border-4 border-sky-500">
+<!-- template at here-->
+
+  <!-- template at here-->
+
+
+
+
+
+  <bR>
+    <button class="btn-information"><span style="color: rgb(236, 45, 20); text-shadow: blue 3px 3px;">ตัวอย่างอำเภอหลังสวน</span></button>
+  <main class="py-6 px-4 sm:p-6 md:py-10 md:px-8">
+    <div class="max-w-4xl mx-auto grid grid-cols-1 lg:max-w-5xl lg:gap-x-20 lg:grid-cols-2">
+      <div class="relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1">
+        <h1 class="mt-1 text-lg font-semibold text-white sm:text-slate-900 md:text-2xl dark:sm:text-white">ทะเลหมอกเขาออง อำเภอหลังสวน  จังหวัดชุมพร</h1>
+        <p class="text-sm leading-4 font-medium text-white sm:text-slate-500 dark:sm:text-slate-400">ทะเลหมอกเขาออง ตำบลหาดยาย</p>
+      </div>
+      <div class="grid gap-4 col-start-1 col-end-3 row-start-1 sm:mb-6 sm:grid-cols-4 lg:gap-6 lg:col-start-2 lg:row-end-6 lg:row-span-6 lg:mb-0">
+        <img src="/amphom/img/langsuan/เขาออง-main.jpg" alt="" class="w-full h-60 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full" loading="lazy">
+        <img src="/amphom/img/langsuan/เขาออง2.jpg" alt="" class="hidden w-full h-52 object-cover rounded-lg sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy">
+        <img src="/amphom/img/langsuan/เขาออง3.jpg" alt="" class="hidden w-full h-52 object-cover rounded-lg md:block lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy">
+      </div>
+      <dl class="mt-4 text-xs font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2">
+        <dt class="sr-only">Reviews</dt>
+        <dd class="text-indigo-600 flex items-center dark:text-indigo-400">
+          <svg width="24" height="24" fill="none" aria-hidden="true" class="mr-1 stroke-current dark:stroke-indigo-500">
+            <path d="m12 5 2 5h5l-4 4 2.103 5L12 16l-5.103 3L9 14l-4-4h5l2-5Z"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span> 0/5<span class="text-slate-400 font-normal">(0)</span></span>
+        </dd>
+        <dt class="sr-only">Location</dt>
+        <dd class="flex items-center">
+          <svg width="2" height="2" aria-hidden="true" fill="currentColor" class="mx-3 text-slate-300">
+            <circle cx="1" cy="1" r="1" />
+          </svg>
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1 text-slate-400 dark:text-slate-500" aria-hidden="true">
+            <path d="M18 11.034C18 14.897 12 19 12 19s-6-4.103-6-7.966C6 7.655 8.819 5 12 5s6 2.655 6 6.034Z" />
+            <path d="M14 11a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
+          </svg>
+          อำเภอหลังสวน, จังหวัดชุมพร
+        </dd>
+      </dl>
+      <div class="mt-4 col-start-1 row-start-3 self-center sm:mt-0 sm:col-start-2 sm:row-start-2 sm:row-span-2 lg:mt-6 lg:col-start-1 lg:row-start-3 lg:row-end-4">
+        <span style="font-size: smaller; color: #ffffff;">อ้างอิงคะแนนรีวิวจาก trip</span><br>
+        <button type="button" class="bg-indigo-600 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg"><a href=https://www.google.co.th/maps/place/Khao+Ong/@9.9708541,98.9888669,15z/data=!3m1!4b1!4m6!3m5!1s0x30566fefd295ffe1:0x19f4803ad5892776!8m2!3d9.9708333!4d98.9991667!16s%2Fg%2F12ls0ntdp?hl=th&entry=ttu" target="_blank">กดที่นี่เพื่อไปตามGOOGLE MAP</a></button>
+      </div>
+      <p class="mt-4 text-sm leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 dark:text-slate-400">
+        เขาออง หรือภูหาดยาย ตั้งอยู่ในเขตตั้งเสาสถานีทวนสัญญาณเขาออง ขององค์การโทรศัพท์แห่งประเทศไทย ตำบลหาดยาย อำเภอหลังสวน จังหวัดชุมพร สูงจากระดับน้ำทะเลราว ๆ 299 เมตร บริเวณจุดชมวิวมีลักษณะเป็นพื้นที่ลานโล่ง ซึ่งสามารถชมวิวภูเขาน้อยใหญ่เบื้องหน้าได้อย่างสวยงามมาก ๆ โดยเฉพาะช่วงฤดูฝน และรอยต่อระหว่างฤดูฝนและฤดูหนาว (ฤดูฝนของชุมพรจะอยู่ระหว่างเดือนตุลาคม-ธันวาคม) ที่จะมีทะเลหมอกให้ได้ชมกันอย่างจุใจ สายหมอกสีขาวมากมายจะลอยตัวอยู่เหนือป่ายางพาราและขุนเขา คอยต้อนรับแสงอาทิตย์สีเหลืองทองที่จะสาดส่องลงมาในทุกเช้า
+      </p>
+    </div>
+  </main>
+  <button class="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><a href="/amphom/langsuan.html" target="_blank">ติดตามอำเภอหลังสวนต่อคลิ๊กเลยย</a></button><br>
+  <br><hr class="border-double border-4 border-sky-500">
+  
+
+ <!-- template at here-->
+
+
+
+
+
+ <bR>
+  <button class="btn-information"><span style="color: rgb(236, 45, 20); text-shadow: blue 3px 3px;">ตัวอย่างอำเภอละแม</span></button>
+<main class="py-6 px-4 sm:p-6 md:py-10 md:px-8">
+  <div class="max-w-4xl mx-auto grid grid-cols-1 lg:max-w-5xl lg:gap-x-20 lg:grid-cols-2">
+    <div class="relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1">
+      <h1 class="mt-1 text-lg font-semibold text-white sm:text-slate-900 md:text-2xl dark:sm:text-white">ตลาดนัดใต้เคื่ยม อำเภอละแม  จังหวัดชุมพร</h1>
+      <p class="text-sm leading-4 font-medium text-white sm:text-slate-500 dark:sm:text-slate-400">ตลาดนัดใต้เคื่ยม ตำบลละแม</p>
+    </div>
+    <div class="grid gap-4 col-start-1 col-end-3 row-start-1 sm:mb-6 sm:grid-cols-4 lg:gap-6 lg:col-start-2 lg:row-end-6 lg:row-span-6 lg:mb-0">
+      <img src="/amphom/img/lamae/ตลาดใต้เคื่ยม.jpg" alt="" class="w-full h-60 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full" loading="lazy">
+      <img src="/amphom/img/lamae/ตลาดใต้เคื่ยม2.jpg" alt="" class="hidden w-full h-52 object-cover rounded-lg sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy">
+      <img src="/amphom/img/lamae/ตลาดใต้เคี่ยม3.jpg" alt="" class="hidden w-full h-52 object-cover rounded-lg md:block lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy">
+    </div>
+    <dl class="mt-4 text-xs font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2">
+      <dt class="sr-only">Reviews</dt>
+      <dd class="text-indigo-600 flex items-center dark:text-indigo-400">
+        <svg width="24" height="24" fill="none" aria-hidden="true" class="mr-1 stroke-current dark:stroke-indigo-500">
+          <path d="m12 5 2 5h5l-4 4 2.103 5L12 16l-5.103 3L9 14l-4-4h5l2-5Z"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <span> 0/5<span class="text-slate-400 font-normal">(0)</span></span>
+      </dd>
+      <dt class="sr-only">Location</dt>
+      <dd class="flex items-center">
+        <svg width="2" height="2" aria-hidden="true" fill="currentColor" class="mx-3 text-slate-300">
+          <circle cx="1" cy="1" r="1" />
+        </svg>
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1 text-slate-400 dark:text-slate-500" aria-hidden="true">
+          <path d="M18 11.034C18 14.897 12 19 12 19s-6-4.103-6-7.966C6 7.655 8.819 5 12 5s6 2.655 6 6.034Z" />
+          <path d="M14 11a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
+        </svg>
+        อำเภอหลังสวน, จังหวัดชุมพร
+      </dd>
+    </dl>
+    <div class="mt-4 col-start-1 row-start-3 self-center sm:mt-0 sm:col-start-2 sm:row-start-2 sm:row-span-2 lg:mt-6 lg:col-start-1 lg:row-start-3 lg:row-end-4">
+      <span style="font-size: smaller; color: #ffffff;">อ้างอิงคะแนนรีวิวจาก wongnai.com</span><br>
+      <button type="button" class="bg-indigo-600 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg"><a href= "https://maps.app.goo.gl/WLZgECeG4eZ5zjur9" target="_blank">กดที่นี่เพื่อไปตามGOOGLE MAP</a></button>
+    </div>
+    <p class="mt-4 text-sm leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 dark:text-slate-400">
+      มาอำเภอละแมทั้งที ต้องไม่พลาด!! "หลาดใต้เคี่ยม" เป็นตลาดนัดชุมชน บรรยากาศเป็นฟีลวิถีพื้นบ้าน และเป็นแหล่งรวมของกิน ของฝาก ให้เพื่อนๆได้อิ่มท้อง และมีของติดไม้ติดมือกลับบ้านกันอีกด้วย ทางตลาดนำสินค้าชุมชนจากชาวบ้านในพื้นที่เข้ามาให้เลือกชม และพวกแก้วน้ำ จาน ชาม ถุงกระดาษก็ยังเลือกใช้วัดถุจากธรรมชาติอีกด้วย ถือเป็นการอนุรักษ์สิ่งแวดล้อมที่ดีทีเดียว ใครมีโอกาสผ่านมาละแม อย่าลืมแวะไปฝากท้องเดินชิลกันที่นี่ได้น้า เค้าเปิดทุกวันอาทิตย์..✨ 
+    </p>
+  </div>
+</main>
+<button class="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><a href="/amphom/lamae.html" target="_blank">ติดตามอำเภอละแมต่อคลิ๊กเลยย</a></button><br>
+<br><hr class="border-double border-4 border-sky-500">
+
+
+ <!-- template at here-->
+
+
+
+
+
+ <bR>
+  <button class="btn-information"><span style="color: rgb(236, 45, 20); text-shadow: blue 3px 3px;">ตัวอย่างอำเภอพะโต๊ะ</span></button>
+<main class="py-6 px-4 sm:p-6 md:py-10 md:px-8">
+  <div class="max-w-4xl mx-auto grid grid-cols-1 lg:max-w-5xl lg:gap-x-20 lg:grid-cols-2">
+    <div class="relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1">
+      <h1 class="mt-1 text-lg font-semibold text-white sm:text-slate-900 md:text-2xl dark:sm:text-white">น้ำตกเหวโหลม อำเภอพะโต๊ะ  จังหวัดชุมพร</h1>
+      <p class="text-sm leading-4 font-medium text-white sm:text-slate-500 dark:sm:text-slate-400">น้ำตกเหวโหลม ตำบลปากทรง</p>
+    </div>
+    <div class="grid gap-4 col-start-1 col-end-3 row-start-1 sm:mb-6 sm:grid-cols-4 lg:gap-6 lg:col-start-2 lg:row-end-6 lg:row-span-6 lg:mb-0">
+      <img src="/amphom/img/patak/น้ำตกเหวโหลม.jpg" alt="" class="w-full h-60 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full" loading="lazy">
+      <img src="/amphom/img/patak/น้ำตกเหวโหลม1.jpg" alt="" class="hidden w-full h-52 object-cover rounded-lg sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy">
+      <img src="/amphom/img/patak/น้ำตกเหวโหลม2.jpg" alt="" class="hidden w-full h-52 object-cover rounded-lg md:block lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy">
+    </div>
+    <dl class="mt-4 text-xs font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2">
+      <dt class="sr-only">Reviews</dt>
+      <dd class="text-indigo-600 flex items-center dark:text-indigo-400">
+        <svg width="24" height="24" fill="none" aria-hidden="true" class="mr-1 stroke-current dark:stroke-indigo-500">
+          <path d="m12 5 2 5h5l-4 4 2.103 5L12 16l-5.103 3L9 14l-4-4h5l2-5Z"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <span> 0/5<span class="text-slate-400 font-normal">(0)</span></span>
+      </dd>
+      <dt class="sr-only">Location</dt>
+      <dd class="flex items-center">
+        <svg width="2" height="2" aria-hidden="true" fill="currentColor" class="mx-3 text-slate-300">
+          <circle cx="1" cy="1" r="1" />
+        </svg>
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1 text-slate-400 dark:text-slate-500" aria-hidden="true">
+          <path d="M18 11.034C18 14.897 12 19 12 19s-6-4.103-6-7.966C6 7.655 8.819 5 12 5s6 2.655 6 6.034Z" />
+          <path d="M14 11a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
+        </svg>
+        อำเภอพะโต๊ะ, จังหวัดชุมพร
+      </dd>
+    </dl>
+    <div class="mt-4 col-start-1 row-start-3 self-center sm:mt-0 sm:col-start-2 sm:row-start-2 sm:row-span-2 lg:mt-6 lg:col-start-1 lg:row-start-3 lg:row-end-4">
+      <span style="font-size: smaller; color: #ffffff;">อ้างอิงคะแนนรีวิวจาก wongnai.com</span><br>
+      <button type="button" class="bg-indigo-600 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg"><a href= "https://maps.app.goo.gl/PEhL2Pkz1R1pJjFD8" target="_blank">กดที่นี่เพื่อไปตามGOOGLE MAP</a></button>
+    </div>
+    <p class="mt-4 text-sm leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 dark:text-slate-400">
+    NOT FOUND DATA IN DATABASE <span style="color: red; font-size: small;">404</span>
+    </p>
+  </div>
+</main>
+<button class="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><a href="/amphom/patao.html" target="_blank" >ติดตามอำเภอพะโต๊ะต่อคลิ๊กเลยย</a></button><br>
+<br><hr class="border-double border-4 border-sky-500">
+
+ <!-- template at here-->
+
+
+
+
+
+ <bR>
+  <button class="btn-information"><span style="color: rgb(236, 45, 20); text-shadow: blue 3px 3px;">ตัวอย่างอำเภอทุ่งตะโก</span></button>
+<main class="py-6 px-4 sm:p-6 md:py-10 md:px-8">
+  <div class="max-w-4xl mx-auto grid grid-cols-1 lg:max-w-5xl lg:gap-x-20 lg:grid-cols-2">
+    <div class="relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1">
+      <h1 class="mt-1 text-lg font-semibold text-white sm:text-slate-900 md:text-2xl dark:sm:text-white">หาดอรุโณทัย อำเภอทุ่งตะโก  จังหวัดชุมพร</h1>
+      <p class="text-sm leading-4 font-medium text-white sm:text-slate-500 dark:sm:text-slate-400">หาดอรุโณทัย ตำบลปากตะโก</p>
+    </div>
+    <div class="grid gap-4 col-start-1 col-end-3 row-start-1 sm:mb-6 sm:grid-cols-4 lg:gap-6 lg:col-start-2 lg:row-end-6 lg:row-span-6 lg:mb-0">
+      <img src="/amphom/img/toitakoi/หาดทุ่งตะโก.jpg" alt="" class="w-full h-60 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full" loading="lazy">
+      <img src="/amphom/img/toitakoi/toitakoi1.jpg" alt="" class="hidden w-full h-52 object-cover rounded-lg sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy">
+      <img src="/amphom/img/toitakoi/toitakoi2.jpg" alt="" class="hidden w-full h-52 object-cover rounded-lg md:block lg:row-start-2 lg:col-span-2 lg:h-32" loading="lazy">
+    </div>
+    <dl class="mt-4 text-xs font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2">
+      <dt class="sr-only">Reviews</dt>
+      <dd class="text-indigo-600 flex items-center dark:text-indigo-400">
+        <svg width="24" height="24" fill="none" aria-hidden="true" class="mr-1 stroke-current dark:stroke-indigo-500">
+          <path d="m12 5 2 5h5l-4 4 2.103 5L12 16l-5.103 3L9 14l-4-4h5l2-5Z"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <span> 0/5<span class="text-slate-400 font-normal">(0)</span></span>
+      </dd>
+      <dt class="sr-only">Location</dt>
+      <dd class="flex items-center">
+        <svg width="2" height="2" aria-hidden="true" fill="currentColor" class="mx-3 text-slate-300">
+          <circle cx="1" cy="1" r="1" />
+        </svg>
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1 text-slate-400 dark:text-slate-500" aria-hidden="true">
+          <path d="M18 11.034C18 14.897 12 19 12 19s-6-4.103-6-7.966C6 7.655 8.819 5 12 5s6 2.655 6 6.034Z" />
+          <path d="M14 11a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
+        </svg>
+        อำเภอทุ่งตะโก, จังหวัดชุมพร
+      </dd>
+    </dl>
+    <div class="mt-4 col-start-1 row-start-3 self-center sm:mt-0 sm:col-start-2 sm:row-start-2 sm:row-span-2 lg:mt-6 lg:col-start-1 lg:row-start-3 lg:row-end-4">
+      <span style="font-size: smaller; color: #ffffff;">อ้างอิงคะแนนรีวิวจาก wongnai.com</span><br>
+      <button type="button" class="bg-indigo-600 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg"><a href= "https://maps.app.goo.gl/8J58fZFpjaHGLXY56" target="_blank">กดที่นี่เพื่อไปตามGOOGLE MAP</a></button>
+    </div>
+    <p class="mt-4 text-sm leading-6 col-start-1 sm:col-span-2 lg:mt-6 lg:row-start-4 lg:col-span-1 dark:text-slate-400">
+    NOT FOUND DATA IN DATABASE <span style="color: red; font-size: small;">404</span>
+    </p>
+  </div>
+</main>
+<button class="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><a href="/amphom/toitakoi.html" target="_blank">ติดตามอำเภอทุ่งตะโกต่อคลิ๊กเลยย</a></button><br>
+<br><hr class="border-double border-4 border-sky-500">
+
+
+
+  
+  <footer class="footer1">
+    <br><br>
+   <center><p>WEBSITE IS CREATE BY INFORMATION TECHNOLOGY SURATTHANI TECHNICAL COLLEGE</p></center> 
+    <br>
+    <center><p>TEEPAKORN LEKTONG 1/1</p></center>
+    <br>
+    <button style="background-color: black; color: #ffffff; width: 60%; height: 50px; border-radius: 15px; margin: auto; border: 10px solid #9c1919; box-shadow: #8d8888 5px 5px;"><a href="/Contact/index.html" target="_blank">ติดต่อผู้พัฒนาที่นี้</a></button>
+    <br>   <br>   <br>
+    <p>©Copyright 2024 Suratthani technical college</p>
+  </footer>
+</center>
+</body>
+</html>

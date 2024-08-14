@@ -1,0 +1,55 @@
+body {
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+}
+
+.banner {
+    position: relative;
+    background-color: #0d82ff; /* สีพื้นหลัง */
+    padding: 20px; /* ระยะห่างภายใน */
+    text-align: center; /* จัดกลางข้อความ */
+    border-radius: 15px;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* จัดกลางการ์ด */
+    flex-wrap: wrap; /* ให้การ์ดห่อหุ้มได้ */
+    gap: 20px; /* ช่องว่างระหว่างการ์ด */
+    margin-top: 20px; /* ระยะห่างด้านบน */
+}
+
+.card1, .card2 {
+    background-color: #c9c1c1; /* สีพื้นหลัง */
+    width: 300px; /* ความกว้างของการ์ด */
+    padding: 14px;
+    border-radius: 14px;
+    text-align: center; /* จัดข้อความตรงกลาง */
+    box-shadow: 0 2px 10px 2px rgba(0, 0, 0, 0.1); /* เงา */
+}
+
+.mar {
+    font-size: 18px; /* ขนาดตัวอักษร */
+    color: #333; /* สีตัวอักษร */
+    background-color: #f8f9fa; /* สีพื้นหลัง */
+    padding: 10px; /* ระยะห่างภายใน */
+    border-radius: 5px; /* มุมมน */
+}
+
+
+.img_src {
+    width: 100%; /* ทำให้รูปภาพเต็มการ์ด */
+    border-radius: 10px; /* มุมมน */
+    background-color: rgb(160, 66, 49);
+}
+
+@media screen and (max-width: 768px) {
+    .card1, .card2 {
+        width: 80%; /* ปรับความกว้างเมื่อหน้าจอเล็กลง */
+    }
+}
+.logo-anm {
+    max-width: 100%; /* ทำให้รูปภาพมีความกว้างสูงสุด 100% ของคอนเทนเนอร์ */
+    height: auto; /* ให้ความสูงปรับตามอัตราส่วน */
+    margin-bottom: 20px; /* ระยะห่างด้านล่าง */
+    border-radius: 100% 100% 100% 100%;
+}
